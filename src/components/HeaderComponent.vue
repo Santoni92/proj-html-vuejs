@@ -11,6 +11,10 @@
           <div><i class="fa-solid fa-circle-user"></i></div>
            <div><i class="fa-solid fa-cart-shopping"></i></div>
         </div>
+        <div class="search">
+          <input type="text" placeholder="Search...">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
     </div>
   </div>
 </template>
@@ -47,7 +51,13 @@ export default {
           display:flex;
           justify-content:space-between;
         }
-
-   }
+        .search{
+          border: 1px solid wheat;
+          border-radius:50px;
+           input{
+                border-style: none;
+               }
+          }
+    }
 }
 </style>
