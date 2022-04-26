@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="container">
     <img src="../../public/img/dark-logo.png" alt="">
     <div class="navbar">
@@ -17,6 +18,7 @@
         </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -30,34 +32,38 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.container{
-  max-width:1170px;
-  margin:0 auto;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  .navbar{
-    display:flex;
+div{
+  background-color: #1f2154;
+  .container{
+    max-width:1170px;
+    margin:0 auto;
+   display:flex;
     justify-content: space-between;
     align-items: center;
-    ul {
-        display: flex;
-        list-style-type: none;
-        li{
-            margin-right:30px;
+    color:white;
+    .navbar{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+          display: flex;
+          list-style-type: none;
+          li{
+             margin-right:30px;
+            }
           }
-        }
-        .icons{
-          display:flex;
-          justify-content:space-between;
-        }
-        .search{
-          border: 1px solid wheat;
-          border-radius:50px;
+          .icons{
+            display:flex;
+            justify-content:space-between;
+          }
+          .search{
+            border: 1px solid wheat;
+            border-radius:50px;
            input{
                 border-style: none;
                }
           }
-    }
+     }
+  }
 }
 </style>

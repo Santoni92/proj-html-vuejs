@@ -12,7 +12,7 @@ export default {
     name:'JumbotronComponent',
     data(){
         return{
-            message: 'Get stareted for free'
+            message: 'Get started for free '
         }
     },
     components:{
