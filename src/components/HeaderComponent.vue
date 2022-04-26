@@ -1,10 +1,17 @@
 <template>
   <div class="container">
-    <ul>
-      <li v-for="voceMenu in vociMenuHeader" :key="voceMenu">
-        {{ voceMenu }}
-      </li>
-    </ul>
+    <img src="../../public/img/dark-logo.png" alt="">
+    <div class="navbar">
+       <ul>
+          <li v-for="voceMenu in vociMenuHeader" :key="voceMenu">
+            <div>{{ voceMenu }} <i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+        </ul>
+        <div class="icons">
+          <div><i class="fa-solid fa-circle-user"></i></div>
+           <div><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -23,12 +30,24 @@ export default {
   max-width:1170px;
   margin:0 auto;
   display:flex;
-  ul {
-    display: flex;
-    list-style-type: none;
-    li{
-      padding:5px;
-    }
-  }
+  justify-content: space-between;
+  align-items: center;
+  .navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        list-style-type: none;
+        li{
+            margin-right:30px;
+          }
+        }
+        .icons{
+          display:flex;
+          justify-content:space-between;
+        }
+
+   }
 }
 </style>

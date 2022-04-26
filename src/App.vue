@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <HeaderComponent :vociMenuHeader="vociMenuHeader"/>
+    <Jumbotron/>
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
+import Jumbotron from './components/Jumbotron.vue'
 
 export default {
   name: 'App',
@@ -15,7 +17,8 @@ export default {
     }
   },
   components: {
-    HeaderComponent
+    HeaderComponent,
+    Jumbotron
   }
 }
 </script>
