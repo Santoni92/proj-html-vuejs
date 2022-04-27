@@ -33,6 +33,9 @@ div{
     align-items: center;
     color:white;
     background-color: #1f2154;
+    h1,h3{
+        margin-bottom:30px;
+    }
     .immagini{
         display:flex;
         flex-direction:row;

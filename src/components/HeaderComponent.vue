@@ -55,6 +55,7 @@ div{
           .icons{
             display:flex;
             justify-content:space-between;
+            margin-right:30px;
           }
           .search{
             background-color:white;
