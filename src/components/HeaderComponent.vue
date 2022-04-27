@@ -37,7 +37,7 @@ div{
   .container{
     max-width:1170px;
     margin:0 auto;
-   display:flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     color:white;
@@ -57,10 +57,15 @@ div{
             justify-content:space-between;
           }
           .search{
+            background-color:white;
             border: 1px solid wheat;
             border-radius:50px;
+            padding:5px;
            input{
                 border-style: none;
+               }
+               i{
+                 color:#1fad96;
                }
           }
      }

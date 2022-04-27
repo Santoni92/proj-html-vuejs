@@ -2,7 +2,12 @@
   <div>
           <h1>Learn At Your Own Pace!</h1>
           <h3>Get teamed up with people of the same will</h3>
-          <ButtonComponent :message="message"/>
+          <ButtonComponent :messageButton="message"/>
+          <div class="immagini">
+              <img src="../../public/img/home-6-hero-left-person.png" alt="">
+              <img src="../../public/img/home-6-hero-poster-final.jpg" alt="">
+              <img src="../../public/img/home-6-hero-right-person.png" alt="">
+          </div>
   </div>
 </template>
 
@@ -26,5 +31,12 @@ div{
     display:flex;
     flex-direction:column;
     align-items: center;
+    color:white;
+    background-color: #1f2154;
+    .immagini{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+    }
 }
 </style>
