@@ -22,7 +22,15 @@
     </div>
 
     <!--sez. latest-featured-->
-    <h3>CHOSE A COURSE TO GET STARTED</h3>
+    <div id="latest-featured">
+        <h3>CHOSE A COURSE TO GET STARTED</h3>
+        <h1>Latest Featured Courses</h1>
+        <div class="card-info-course">
+            <div v-for="(informationCourse,index) in informationCourses" :key="index" class="w-50">
+                <CardInformationCourse :informationCourse="informationCourse"/>
+             </div>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -32,6 +40,7 @@ import Testimony from './Testimony.vue'
 import StatisticalData from './StatisticalData.vue'
 import CardImage from './CardImage.vue'
 import ChecklistComponent from './ChecklistComponent.vue'
+import CardInformationCourse from './CardInformationCourse.vue'
 export default {
 name:'MainComponent',
 
@@ -95,6 +104,38 @@ data(){
                 titoletto:'TOGETHER WE CAN CREATE',
                 checkItems:['Select and customize courses to your preferences','Change the tutor and make arrangements','Partecipate in events to join others','Get the desired certificate delivered at house']
             },
+            informationCourses:[
+                {
+                    urlImg:'img/course-02-480x298.jpg',
+                    costo:'$40.00',
+                    descrizione:'Learning to write as a professional author',
+                },
+                {
+                    urlImg:'img/stock-full-hd-03-480x298.jpg',
+                    costo:'FREE',
+                    descrizione:'Customer-centric info-tech Strategies'
+                },
+                {
+                    urlImg:'img/stock-full-hd-04-480x298.jpg',
+                    costo:'$19.00',
+                    descrizione:'Open Programming Courses for Everyone:Python'
+                },
+                {
+                    urlImg:'img/stock-full-hd-06-480x298.jpg',
+                    costo:'$26.00',
+                    descrizione:'Academic Listening and NoteTaking'
+                },
+                {
+                    urlImg:'img/course-featured-image-01-480x298.jpg',
+                    costo:'$39.00',
+                    descrizione:'Master JQUERY ina short period of time'
+                },
+                {
+                    urlImg:'img/stock-full-hd-05-480x298.jpg',
+                    costo:'$59.00',
+                    descrizione:'Introduction to JavaScript for Beginners'
+                }
+            ],
         message:'Get started for free'
     }
 },
@@ -104,7 +145,8 @@ data(){
      Testimony,
      StatisticalData,
      CardImage,
-     ChecklistComponent
+     ChecklistComponent,
+     CardInformationCourse
  }
 }
 </script>
@@ -123,20 +165,29 @@ data(){
     {display:flex;
      flex-direction:column;
      align-items: center;
-     margin-top:30px;
+     margin-top:50px;
      background-image:url('../../public/img/background-pattern-grid-line.png');
     }
     /*sez.services-we-can */
     #services-we-can
     {background-image:url('../../public/img/background-pattern-grid-line.png');
      display: flex;
-     margin-top: 30px;
+     margin-top: 50px;
     .card-side{
         width:50%;
         display:flex;
         flex-wrap:wrap;
         align-items: baseline;
       }
+    }
+    /*sez.latest-featured*/
+    #latest-featured{
+        margin-top:50px;
+        text-align:center;
+        .card-info-course{
+            display: flex;
+            flex-wrap:wrap;
+        }
     }
 }
 </style>
