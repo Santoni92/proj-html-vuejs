@@ -6,7 +6,9 @@
           </div>
           <div class="costo-descrizione">
                <span class="green">{{ informationCourse.costo }}</span>
-              <p>{{informationCourse.descrizione}}</p>
+               <p>{{ informationCourse.descrizione }}</p>
+               <i class="fa-solid fa-rectangle-list"></i>{{ informationCourse.numeroLezioni }}
+               <i class="fa-solid fa-user"></i>{{ informationCourse.numeroStudenti }}
           </div>
       </div>
   </div>
@@ -26,10 +28,10 @@ export default {
     display:flex;
     font-weight:600;
     img{
-         height: 200px;
-         width: 200px;
-        object-fit: cover;
-        border-radius: 50%;
+         height: 250px;
+         width: 250px;
+         object-fit: cover;
+         border-radius: 50%;
     }
     .costo-descrizione{
         padding:80px;

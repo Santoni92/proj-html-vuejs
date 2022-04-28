@@ -1,0 +1,24 @@
+[
+    {
+        "titolo":"Graphic Design",
+        "testo":"Have a passion for graphics and art? Show your talents with confidence and self assertiveness",
+        "imgUrl":"img/home-6-service-image-01.png",
+        "imgPosition":"down"
+    },
+     {
+        "titolo":"business-administration",
+        "testo":"Learners are encouraged to study the mechanism and structure of system administratio",
+        "imgUrl":"img/home-6-service-image-02.png",
+        "imgPosition":"down"
+    },
+    {
+        "titolo":"Idea Discussion",
+        "testo":"Get teamed up with the specialist who work and teach coding for years at famous university",
+        "imgUrl":"img/home-6-service-image-03.png"
+    },
+    {
+        "titolo":"Web Development",
+        "testo":"Get teamed up with the specialist who work and teach coding for years at famous university",
+        "imgUrl":"img/home-6-service-image-04.png"
+    }
+]

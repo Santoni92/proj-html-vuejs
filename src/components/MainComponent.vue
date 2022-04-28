@@ -17,7 +17,7 @@
         </div>
         <div>
             <ChecklistComponent :checklistInformations="checklistInformations"/>
-            <ButtonComponent :messageButton="message"/>
+            <ButtonComponent :messageButton="messageButtonInsert[0]"/>
         </div>
     </div>
 
@@ -30,7 +30,11 @@
                 <CardInformationCourse :informationCourse="informationCourse"/>
              </div>
         </div>
+        <ButtonComponent :messageButton="messageButtonInsert[1]"/>
     </div>
+    <!--sez. talk-about-->
+    <h1>Why People Talk About MaxCoach</h1>
+    
 </div>
 </template>
 
@@ -41,102 +45,24 @@ import StatisticalData from './StatisticalData.vue'
 import CardImage from './CardImage.vue'
 import ChecklistComponent from './ChecklistComponent.vue'
 import CardInformationCourse from './CardInformationCourse.vue'
+//data
+import testimonianze from '@/assets/testimonianze'
+import infoStatistiche from '@/assets/infoStatistiche'
+import cardImgInformations from '@/assets/cardImgInformations'
+import checklistInformations from '@/assets/checklistInformations'
+import informationCourses from '@/assets/informationCourses'
+import messageButtonInsert from '@/assets/messageButtonInsert'
 export default {
 name:'MainComponent',
 
 data(){
     return{
-        testimonianze:[{
-            opinione:'Let passion and determination be the guide along the way and develop at your own pace that\'s comfortable',
-            nomeTestimone:'FANNIE MORENO',
-            ruolo:'/FOUNDER & CEO'
-            },
-            {
-                opinione:'I free to learn at my own pace, follow my own schedule and chose the subject i like.Great study portal for people like me.',
-                nomeTestimone:'MINA HOLLACE',
-                ruolo:'Freelancer'
-            }
-        ],
-        infoStatistiche:[   //array di oggetti
-            {
-                informazioneNumero:'1.926',
-                informazioneSoggetto:'FINISHED SESSIONS'
-            },
-            {
-                informazioneNumero:'3.092+',
-                informazioneSoggetto:'ENROLLED LEARNERS'
-            },
-            {
-                informazioneNumero:'200',
-                informazioneSoggetto:'ONLINE INSTRUCTORS'
-            },
-            {
-                informazioneNumero:'100%',
-                informazioneSoggetto:'SATISFACTION RATE'
-            }
-        ],
-        cardImgInformations:[   //array di oggetti
-            {
-                titolo:'Graphic Design',
-                testo:'Have a passion for graphics and art? Show your talents with confidence and self assertiveness',
-                imgUrl:'img/home-6-service-image-01.png',
-                imgPosition:'down'
-            },
-             {
-                titolo:'business-administration',
-                testo:'Learners are encouraged to study the mechanism and structure of system administratio',
-                imgUrl:'img/home-6-service-image-02.png',
-                imgPosition:'down'
-            },
-            {
-                titolo:'Idea Discussion',
-                testo:'Get teamed up with the specialist who work and teach coding for years at famous university',
-                imgUrl:'img/home-6-service-image-03.png'
-            },
-            {
-                titolo:'Web Development',
-                testo:'Get teamed up with the specialist who work and teach coding for years at famous university',
-                imgUrl:'img/home-6-service-image-04.png'
-            }
-        ],
-        checklistInformations:{
-                titolo:'SERVICES WE CAN PROVIDE FOR MY CLIENTS',
-                titoletto:'TOGETHER WE CAN CREATE',
-                checkItems:['Select and customize courses to your preferences','Change the tutor and make arrangements','Partecipate in events to join others','Get the desired certificate delivered at house']
-            },
-            informationCourses:[
-                {
-                    urlImg:'img/course-02-480x298.jpg',
-                    costo:'$40.00',
-                    descrizione:'Learning to write as a professional author',
-                },
-                {
-                    urlImg:'img/stock-full-hd-03-480x298.jpg',
-                    costo:'FREE',
-                    descrizione:'Customer-centric info-tech Strategies'
-                },
-                {
-                    urlImg:'img/stock-full-hd-04-480x298.jpg',
-                    costo:'$19.00',
-                    descrizione:'Open Programming Courses for Everyone:Python'
-                },
-                {
-                    urlImg:'img/stock-full-hd-06-480x298.jpg',
-                    costo:'$26.00',
-                    descrizione:'Academic Listening and NoteTaking'
-                },
-                {
-                    urlImg:'img/course-featured-image-01-480x298.jpg',
-                    costo:'$39.00',
-                    descrizione:'Master JQUERY ina short period of time'
-                },
-                {
-                    urlImg:'img/stock-full-hd-05-480x298.jpg',
-                    costo:'$59.00',
-                    descrizione:'Introduction to JavaScript for Beginners'
-                }
-            ],
-        message:'Get started for free'
+        testimonianze,
+        infoStatistiche,
+        cardImgInformations,
+        checklistInformations,
+        informationCourses,
+        messageButtonInsert
     }
 },
 
