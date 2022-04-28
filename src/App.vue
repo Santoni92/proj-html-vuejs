@@ -10,12 +10,13 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import Jumbotron from './components/Jumbotron.vue'
 import MainComponent from './components/MainComponent.vue'
-
+//Strutture Dati
+import vociMenuHeader from '@/assets/vociMenuHeader'
 export default {
   name: 'App',
   data(){
     return{
-      vociMenuHeader:['Home','Pages','Courses','Features','Blog','Shop']
+      vociMenuHeader
     }
   },
   components: {

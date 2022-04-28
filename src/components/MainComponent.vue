@@ -1,5 +1,6 @@
 <template>
 <div class="container">
+
     <!--sez. let-passion-->
     <div id="let-passion">
         <Testimony :testimonianza="testimonianze[0]"/>
@@ -32,6 +33,7 @@
         </div>
         <ButtonComponent :messageButton="messageButtonInsert[1]"/>
     </div>
+
     <!--sez. talk-about-->
     <div id="talk-about">
          <h1>Why People Talk About MaxCoach</h1>
@@ -40,6 +42,15 @@
             <Testimony :testimonianza="testimonianze[1]"/>
          </div>
          <LogoBar :urlImgLogos="urlImgLogos"/>
+    </div>
+
+    <!--sez. our-blogs--->
+    <div id="our-blogs">
+        <h3>ENJOY READING ON MAXCOACH</h3>
+        <h1>Latest On Our Blogs</h1>
+        <div v-for="(informationBlog,index) in informationsBlog" :key="index">
+            <CardBlog :informationBlog="informationBlog"/>
+        </div>
     </div>
 </div>
 </template>
@@ -52,6 +63,7 @@ import CardImage from './CardImage.vue'
 import ChecklistComponent from './ChecklistComponent.vue'
 import CardInformationCourse from './CardInformationCourse.vue'
 import LogoBar from './LogoBar.vue'
+import CardBlog from './CardBlog.vue'
 //Strutture Dati
 import testimonianze from '@/assets/testimonianze'
 import infoStatistiche from '@/assets/infoStatistiche'
@@ -60,6 +72,7 @@ import checklistInformations from '@/assets/checklistInformations'
 import informationCourses from '@/assets/informationCourses'
 import messageButtonInsert from '@/assets/messageButtonInsert'
 import urlImgLogos from '@/assets/urlImgLogos'
+import informationsBlog from '@/assets/informationsBlog'
 export default {
 name:'MainComponent',
 
@@ -71,7 +84,8 @@ data(){
         checklistInformations,
         informationCourses,
         messageButtonInsert,
-        urlImgLogos
+        urlImgLogos,
+        informationsBlog
     }
 },
 
@@ -82,7 +96,8 @@ data(){
      CardImage,
      ChecklistComponent,
      CardInformationCourse,
-     LogoBar
+     LogoBar,
+     CardBlog
  }
 }
 </script>
