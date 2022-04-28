@@ -4,15 +4,36 @@
     box-sizing:border-box;
   }
 
-  .w-50{
+  .container{
+    max-width:1170px;
+    margin:0 auto;
+  }
+
+.w-50{
     width:50%;
     }
+
+.w-33{
+  width:calc(100% / 3);
+}
+
+.w-25{
+  width:calc(100% / 4);
+}
+
+.p-10{
+  padding:10px;
+}
+
+.p-30{
+  padding:30px;
+}
 
 .d-flex{
     display:flex;
   }
 
-  .justify-content-center{
+.justify-content-center{
     justify-content: center;
   }
   
@@ -20,6 +41,10 @@
   justify-content:space-between;
 }
 
-  .align-items-center{
+ .align-items-center{
     align-items:center;
+  }
+
+  .green{
+    color:#1fad96;
   }

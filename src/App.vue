@@ -3,6 +3,7 @@
     <HeaderComponent :vociMenuHeader="vociMenuHeader"/>
     <Jumbotron/>
     <MainComponent/>
+    <FooterComponent/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import Jumbotron from './components/Jumbotron.vue'
 import MainComponent from './components/MainComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 //Strutture Dati
 import vociMenuHeader from '@/assets/vociMenuHeader'
 export default {
@@ -22,7 +24,8 @@ export default {
   components: {
     HeaderComponent,
     Jumbotron,
-    MainComponent
+    MainComponent,
+    FooterComponent
   }
 }
 </script>
