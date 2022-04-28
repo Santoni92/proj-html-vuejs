@@ -33,8 +33,14 @@
         <ButtonComponent :messageButton="messageButtonInsert[1]"/>
     </div>
     <!--sez. talk-about-->
-    <h1>Why People Talk About MaxCoach</h1>
-    
+    <div id="talk-about">
+         <h1>Why People Talk About MaxCoach</h1>
+         <div class="d-flex align-items-center">
+            <img src="/img/testimonial-avata-02.jpg" alt="">
+            <Testimony :testimonianza="testimonianze[1]"/>
+         </div>
+         <LogoBar :urlImgLogos="urlImgLogos"/>
+    </div>
 </div>
 </template>
 
@@ -45,13 +51,15 @@ import StatisticalData from './StatisticalData.vue'
 import CardImage from './CardImage.vue'
 import ChecklistComponent from './ChecklistComponent.vue'
 import CardInformationCourse from './CardInformationCourse.vue'
-//data
+import LogoBar from './LogoBar.vue'
+//Strutture Dati
 import testimonianze from '@/assets/testimonianze'
 import infoStatistiche from '@/assets/infoStatistiche'
 import cardImgInformations from '@/assets/cardImgInformations'
 import checklistInformations from '@/assets/checklistInformations'
 import informationCourses from '@/assets/informationCourses'
 import messageButtonInsert from '@/assets/messageButtonInsert'
+import urlImgLogos from '@/assets/urlImgLogos'
 export default {
 name:'MainComponent',
 
@@ -62,7 +70,8 @@ data(){
         cardImgInformations,
         checklistInformations,
         informationCourses,
-        messageButtonInsert
+        messageButtonInsert,
+        urlImgLogos
     }
 },
 
@@ -72,7 +81,8 @@ data(){
      StatisticalData,
      CardImage,
      ChecklistComponent,
-     CardInformationCourse
+     CardInformationCourse,
+     LogoBar
  }
 }
 </script>
@@ -80,10 +90,6 @@ data(){
 <style lang="scss" scoped>
 .container
 {
-    /*general */
-    .w-50{
-    width:50%;
-    }
     max-width:1170px;
     margin:0 auto;
     /*sez.let-passion*/
@@ -108,11 +114,27 @@ data(){
     }
     /*sez.latest-featured*/
     #latest-featured{
+        background-color: #f5f7fa;
+        padding:80px;
         margin-top:50px;
         text-align:center;
         .card-info-course{
             display: flex;
             flex-wrap:wrap;
+        }
+    }
+    /*sez. talk-about*/
+    #talk-about{
+       margin-top:50px;
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
+        img{
+            height: 250px;
+            width: 250px;
+            object-fit: cover;
+            border-radius: 50%;
         }
     }
 }
