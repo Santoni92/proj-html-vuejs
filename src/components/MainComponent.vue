@@ -2,7 +2,7 @@
 <div class="container">
 
     <!--sez. let-passion-->
-    <div id="let-passion">
+    <div id="let-passion" class="d-flex flex-direction-column align-items-center">
         <Testimony :testimonianza="testimonianze[0]"/>
         <div>
                 <StatisticalData :infoStatistiche="infoStatistiche"/>
@@ -10,24 +10,24 @@
     </div>
 
     <!--sez. services-we-can-->
-    <div id="services-we-can">
-        <div class="card-side">
+    <div id="services-we-can" class="d-flex">
+        <div class="card-side d-flex">
             <div v-for="(item,index) in cardImgInformations" :key="index" class="w-50">
                 <CardImage :cardImgInformation = "item"/>
             </div>
         </div>
-        <div>
+        <div class="d-flex flex-direction-column justify-content-center p-30">
             <ChecklistComponent :checklistInformations="checklistInformations"/>
-            <ButtonComponent :messageButton="messageButtonInsert[0]"/>
+            <ButtonComponent :messageButton="messageButtonInsert[0]" class="w-50-percento"/>
         </div>
     </div>
 
     <!--sez. latest-featured-->
     <div id="latest-featured">
         <h3>CHOSE A COURSE TO GET STARTED</h3>
-        <h1>Latest Featured Courses</h1>
+        <h1>Latest Featured <span class="green">Courses</span></h1>
         <div class="card-info-course">
-            <div v-for="(informationCourse,index) in informationCourses" :key="index" class="w-50">
+            <div v-for="(informationCourse,index) in informationCourses" :key="index" class="w-50 p-10">
                 <CardInformationCourse :informationCourse="informationCourse"/>
              </div>
         </div>
@@ -121,26 +121,18 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-.container
-{
-    max-width:1170px;
-    margin:0 auto;
     /*sez.let-passion*/
     #let-passion
-    {display:flex;
-     flex-direction:column;
-     align-items: center;
+    {
      margin-top:50px;
      background-image:url('../../public/img/background-pattern-grid-line.png');
     }
     /*sez.services-we-can */
     #services-we-can
     {background-image:url('../../public/img/background-pattern-grid-line.png');
-     display: flex;
      margin-top: 50px;
     .card-side{
         width:50%;
-        display:flex;
         flex-wrap:wrap;
         align-items: baseline;
       }
@@ -197,5 +189,5 @@ data(){
               background-repeat: no-repeat;
          }
     }
-}
+
 </style>

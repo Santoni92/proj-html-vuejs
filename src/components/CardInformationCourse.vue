@@ -1,10 +1,10 @@
 <template>
   <div>
       <div class="card d-flex align-items-center justify-content-center">
-          <div class="img">
+          <div>
                <img :src="informationCourse.urlImg" alt="">
           </div>
-          <div class="costo-descrizione">
+          <div>
                <span class="green">{{ informationCourse.costo }}</span>
                <p>{{ informationCourse.descrizione }}</p>
                <div class="d-flex align-items-center justify-content-center">
@@ -28,14 +28,16 @@ export default {
 <style lang="scss" scoped>
 .card{
     font-weight:600;
+    &:hover{
+        background-color: white;
+        transform: scale(1.1);
+        border-radius:10px;
+    }
     img{
          height: 250px;
          width: 250px;
          object-fit: cover;
          border-radius: 50%;
-    }
-    .costo-descrizione{
-        padding:80px;
     }
     .green{
         color:#1fad96;

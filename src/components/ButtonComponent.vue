@@ -18,6 +18,10 @@ button{
     font-size:25px;
     padding:10px;
     border-radius: 10px;
+    &:hover{
+        background-color: white;
+        color:green;
+    }
 }
 
 </style>

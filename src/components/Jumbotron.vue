@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="d-flex flex-direction-column align-items-center">
           <h1>Learn At Your Own Pace!</h1>
           <h3>Get teamed up with people of the same will</h3>
           <ButtonComponent :messageButton="message"/>
-          <div class="immagini">
+          <div class="d-flex justify-content-center immagini">
               <img src="../../public/img/home-6-hero-left-person.png" alt="">
               <img src="../../public/img/home-6-hero-poster-final.jpg" alt="">
               <img src="../../public/img/home-6-hero-right-person.png" alt="">
@@ -28,18 +28,14 @@ export default {
 
 <style lang="scss" scoped>
 div{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
+    padding:50px;
     color:white;
     background-color: #1f2154;
+    .immagini{
+        margin-top:100px;
+    }
     h1,h3{
         margin-bottom:30px;
-    }
-    .immagini{
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
     }
 }
 </style>

@@ -21,6 +21,10 @@
   width:calc(100% / 4);
 }
 
+.w-50-percento{
+  width:50%;
+}
+
 .p-10{
   padding:10px;
 }
@@ -32,6 +36,10 @@
 .d-flex{
     display:flex;
   }
+
+.flex-direction-column{
+  flex-direction:column;
+}
 
 .justify-content-center{
     justify-content: center;
@@ -47,4 +55,8 @@
 
   .green{
     color:#1fad96;
+  }
+
+  .line-height{
+    line-height:1.5rem;
   }

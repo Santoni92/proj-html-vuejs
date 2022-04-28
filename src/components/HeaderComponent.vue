@@ -1,19 +1,19 @@
 <template>
 <div>
-  <div class="container">
+  <div class="container d-flex justify-content-between align-items-center p-30">
     <img src="../../public/img/dark-logo.png" alt="">
-    <div class="navbar">
-       <ul>
+    <div class=" d-flex justify-content-between align-items-center navbar">
+       <ul class="d-flex">
           <li v-for="voceMenu in vociMenuHeader" :key="voceMenu">
             <div>{{ voceMenu }} <i class="fa-solid fa-chevron-down"></i></div>
           </li>
         </ul>
-        <div class="icons">
-          <div><i class="fa-solid fa-circle-user"></i></div>
-           <div><i class="fa-solid fa-cart-shopping"></i></div>
+        <div class=" d-flex justify-content-between">
+          <div class=p-10><i class="fa-solid fa-circle-user"></i></div>
+           <div class=p-10><i class="fa-solid fa-cart-shopping"></i></div>
         </div>
         <div class="search">
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Search..." class="p-10">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
@@ -33,34 +33,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 div{
-  background-color: #1f2154;
-  .container{
-    max-width:1170px;
-    margin:0 auto;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #1f2154;
     color:white;
-    .navbar{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
+    img{
+      width:20%;
+    }
       ul {
-          display: flex;
           list-style-type: none;
           li{
-             margin-right:30px;
+             /*margin-right:30px;*/
+             padding:10px;
             }
-          }
-          .icons{
-            display:flex;
-            justify-content:space-between;
-            margin-right:30px;
           }
           .search{
             background-color:white;
             border: 1px solid wheat;
-            border-radius:50px;
+            border-radius:10px;
             padding:5px;
            input{
                 border-style: none;
@@ -69,7 +57,5 @@ div{
                  color:#1fad96;
                }
           }
-     }
-  }
 }
 </style>
