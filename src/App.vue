@@ -13,7 +13,7 @@ import Jumbotron from './components/Jumbotron.vue'
 import MainComponent from './components/MainComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
 //Strutture Dati
-import vociMenuHeader from '@/assets/vociMenuHeader'
+import vociMenuHeader from '@/assets/struttureDati/vociMenuHeader'
 export default {
   name: 'App',
   data(){

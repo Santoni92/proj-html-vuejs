@@ -27,7 +27,7 @@
 <script>
 import CreateListComponent from './CreateListComponent.vue'
 //Strutture Dati
-import address from '@/assets/address'
+import address from '@/assets/struttureDati/address'
 export default {
     name:'FooterComponent',
     data(){

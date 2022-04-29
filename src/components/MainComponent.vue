@@ -66,6 +66,13 @@
         </div>
         <div class="sfondo"></div>
     </div>
+
+    <!--sez. online-certification-->
+    <div id="online-certification" class="p-30">
+        <h3>Start today for getting <span class="green">Online Certification</span></h3>
+        <h1>You can be your own guiding star with our help!</h1>
+        <ButtonComponent :messageButton="messageButtonInsert[2]"/>
+    </div>
 </div>
 </template>
 
@@ -80,15 +87,15 @@ import LogoBar from './LogoBar.vue'
 import CardBlog from './CardBlog.vue'
 import CardLearn from './CardLearn.vue'
 //Strutture Dati
-import testimonianze from '@/assets/testimonianze'
-import infoStatistiche from '@/assets/infoStatistiche'
-import cardImgInformations from '@/assets/cardImgInformations'
-import checklistInformations from '@/assets/checklistInformations'
-import informationCourses from '@/assets/informationCourses'
-import messageButtonInsert from '@/assets/messageButtonInsert'
-import urlImgLogos from '@/assets/urlImgLogos'
-import informationsBlog from '@/assets/informationsBlog'
-import thingsToLearn from '@/assets/thingsToLearn'
+import testimonianze from '@/assets/struttureDati/testimonianze'
+import infoStatistiche from '@/assets/struttureDati/infoStatistiche'
+import cardImgInformations from '@/assets/struttureDati/cardImgInformations'
+import checklistInformations from '@/assets/struttureDati/checklistInformations'
+import informationCourses from '@/assets/struttureDati/informationCourses'
+import messageButtonInsert from '@/assets/struttureDati/messageButtonInsert'
+import urlImgLogos from '@/assets/struttureDati/urlImgLogos'
+import informationsBlog from '@/assets/struttureDati/informationsBlog'
+import thingsToLearn from '@/assets/struttureDati/thingsToLearn'
 export default {
 name:'MainComponent',
 
@@ -187,6 +194,14 @@ data(){
               background-size: contain;
               background-position: center;
               background-repeat: no-repeat;
+         }
+    }
+    /*sez. online-certification*/
+    #online-certification{
+         margin-top:50px;
+         text-align:center;
+         h3,h1{
+             margin-bottom:20px;
          }
     }
 
